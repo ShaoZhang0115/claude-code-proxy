@@ -1,5 +1,11 @@
 This is a bug-fix version and only for self-use. 
 
+Terminal proxy setup
+```bash
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+no_proxy="localhost,127.0.0.1,0.0.0.0"
+```
+
 
 ```bash
 conda create -n claude-code-proxy
