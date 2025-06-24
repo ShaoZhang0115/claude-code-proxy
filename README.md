@@ -1,27 +1,30 @@
-This is a bug-fix version and only for self-use. 
+##T his is a bug-fix version and only for self-use. 
 
-Terminal proxy setup
+#### Terminal proxy setup
 ```bash
 export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
 no_proxy="localhost,127.0.0.1,0.0.0.0"
 ```
 
-
+#### Env
 ```bash
 conda create -n claude-code-proxy
 pip install -r requirements.txt
 ```
 
+#### Config
 ```bash
 cp .env.example .env
 # Edit .env and add your API configuration
 ```
 
+#### Run
 ```bash
 # Direct run
 python start_proxy.py
 ```
 
+#### Use
 ```bash
 ANTHROPIC_BASE_URL=http://localhost:8082 claude
 ```
