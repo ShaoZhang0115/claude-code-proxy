@@ -1,4 +1,4 @@
-This is bug fix version and only for self-use. 
+This is a bug-fix version and only for self-use. 
 
 
 ```bash
