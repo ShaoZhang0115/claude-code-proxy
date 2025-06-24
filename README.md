@@ -1,3 +1,28 @@
+This is bug fix version and only for self-use. 
+
+
+```bash
+conda create -n claude-code-proxy
+pip install -r requirements.txt
+```
+
+```bash
+cp .env.example .env
+# Edit .env and add your API configuration
+```
+
+``````bash
+# Direct run
+python start_proxy.py
+```
+
+```bash
+ANTHROPIC_BASE_URL=http://localhost:8082 claude
+```
+
+
+------------original readme
+
 # Claude Code Proxy
 
 A proxy server that enables **Claude Code** to work with OpenAI-compatible API providers. Convert Claude API requests to OpenAI API calls, allowing you to use various LLM providers through the Claude Code CLI.
