@@ -11,7 +11,7 @@ cp .env.example .env
 # Edit .env and add your API configuration
 ```
 
-``````bash
+```bash
 # Direct run
 python start_proxy.py
 ```
