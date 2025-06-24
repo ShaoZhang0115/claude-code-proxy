@@ -11,7 +11,8 @@ class Config:
         self.openai_base_url = os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1")
         self.host = os.environ.get("HOST", "0.0.0.0")
         self.port = int(os.environ.get("PORT", "8082"))
-        self.log_level = os.environ.get("LOG_LEVEL", "INFO")
+        log_level_str = os.environ.get("LOG_LEVEL", "INFO")
+        self.log_level = log_level_str.split('#')[0].strip().strip('"\'')
         self.max_tokens_limit = int(os.environ.get("MAX_TOKENS_LIMIT", "4096"))
         self.min_tokens_limit = int(os.environ.get("MIN_TOKENS_LIMIT", "100"))
         
@@ -20,8 +21,10 @@ class Config:
         self.max_retries = int(os.environ.get("MAX_RETRIES", "2"))
         
         # Model settings - BIG and SMALL models
-        self.big_model = os.environ.get("BIG_MODEL", "gpt-4o")
-        self.small_model = os.environ.get("SMALL_MODEL", "gpt-4o-mini")
+        big_model_str = os.environ.get("BIG_MODEL", "gpt-4o")
+        self.big_model = big_model_str.split('#')[0].strip().strip('"\'')
+        small_model_str = os.environ.get("SMALL_MODEL", "gpt-4o-mini")
+        self.small_model = small_model_str.split('#')[0].strip().strip('"\'')
         
     def validate_api_key(self):
         """Basic API key validation"""
